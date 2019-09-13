@@ -1,3 +1,7 @@
-Makefile/
+Makefile
 make.bat
-source/
+
+/source
+
+.DS_Store
+*/.DS_Store
