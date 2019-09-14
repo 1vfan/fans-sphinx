@@ -61,12 +61,10 @@ $ vi ~/Sphinx/Makefile
 BUILDDIR     = ~/Github/sphinx.doc
 ```
 
-when ``make html`` generated html and git push to ``sphinx.doc``.
+when ``make html`` generated html and git push to [sphinx.doc](https://github.com/1vfan/sphinx.doc).
 
+## Elegant access
 
+Building GitHub Pages site `https://1vfan.github.io/sphinx.doc` for [sphinx.doc](https://github.com/1vfan/sphinx.doc) from the master branch. 
 
-
-
-
-
-
+Custom domains [sphinx.doc](doc.lvfan.me) allow you to serve your site from a domain.
