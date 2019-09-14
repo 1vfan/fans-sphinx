@@ -42,6 +42,8 @@ $ cd ~/Sphinx
 $ make html
 ```
 
+![](img/sphinx-doc.png)
+
 ## Custom config
 
 - Adopt a third party theme ``sphinx_rtd_theme`` and config ``conf.py``.
