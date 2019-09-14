@@ -1,7 +1,4 @@
-Makefile
-make.bat
-
-/source
-
+/doctrees
+*/_sources
 .DS_Store
 */.DS_Store
