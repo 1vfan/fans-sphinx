@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. DB2空间数据库Server安装 &mdash; Stefan 1.0.0-RELEASE documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Oracle" href="../oracle.html" />
+    <link rel="prev" title="1. DB2空间数据库Client安装" href="DB2空间数据库Client安装.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Stefan
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../rdbms.html">RDBMS</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../db2.html">DB2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="DB2空间数据库Client安装.html">1. DB2空间数据库Client安装</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. DB2空间数据库Server安装</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2.1. 系统环境配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#db2-server">2.2. 安装DB2 Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.3. 安装空间模块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2.4. 创建数据库实例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2.5. 外部连接配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.6. 日志和堆参数设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.7. 开启空间数据库</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../oracle.html">Oracle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nosql.html">NoSQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bigdata.html">BigData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tool.html">Tool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Stefan</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../rdbms.html">RDBMS</a> &raquo;</li>
+        
+          <li><a href="../db2.html">DB2</a> &raquo;</li>
+        
+      <li>2. DB2空间数据库Server安装</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/rdbms/db2/DB2空间数据库Server安装.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="db2server">
+<h1>2. DB2空间数据库Server安装<a class="headerlink" href="#db2server" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>2.1. 系统环境配置<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>hostname</p></li>
+<li><p>iptables</p></li>
+<li><p>selinux</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vi /etc/sysconfig/network
+<span class="nv">HOSTNAME</span><span class="o">=</span>db2
+
+$ vi /etc/hosts
+<span class="m">192</span>.168.30.106 db2.zjjzfy.com db2
+
+<span class="c1"># 永久关闭防火墙/开放特定端口供外部访问</span>
+$ service iptables stop
+$ service iptables status
+$ chkconfig iptables off
+
+$ getenforce
+$ vi /etc/sysconfig/selinux
+<span class="nv">SELINUX</span><span class="o">=</span>enforcing -&gt; <span class="nv">SELINUX</span><span class="o">=</span>disabled
+
+$ init <span class="m">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="db2-server">
+<h2>2.2. 安装DB2 Server<a class="headerlink" href="#db2-server" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>检查依赖</p></li>
+<li><p>安装</p></li>
+<li><p>导入许可</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tar -zxvf v9.7fp11_linuxx64_server.tar.gz
+
+$ ./db2prereqcheck
+WARNING: The <span class="m">32</span> bit library file libstdc++.so.6 is not found on the system.
+WARNING: The <span class="m">32</span>-bit library file libpam.so is not found on the system.
+
+$ rpm -ivh glibc-2.12-1.107.el6.i686.rpm nss-softokn-freebl-3.12.9-11.el6.i686.rpm
+$ rpm -ivh libgcc-4.4.7-3.el6.i686.rpm
+$ rpm -ivh libstdc++-4.4.7-3.el6.i686.rpm
+
+$ ./db2_install
+安装路径 no
+数据库版本 ESE
+
+$ <span class="nb">cd</span> /opt/ibm/db2/V9.7/adm
+$ ./db2licm -a /opt/install/db2ese_c.lic
+$ ./db2licm -l
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>安装检查提示需要32位的 <code class="docutils literal notranslate"><span class="pre">libstdc++.so.6</span></code> 和 <code class="docutils literal notranslate"><span class="pre">libpam.so</span></code> ，导入即可</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>2.3. 安装空间模块<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>检查gse</p></li>
+<li><p>安装gse</p></li>
+<li><p>检查确认</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ db2ls -q -b /opt/ibm/db2/V9.7/
+
+$ tar -zxvf v9.7fp11_linuxx64_gse.tar.gz
+$ ./gse/db2_install
+安装路径 no
+
+$ db2ls -q -b /opt/ibm/db2/V9.7/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果检查没有发现 <code class="docutils literal notranslate"><span class="pre">SPATIAL_EXTENDER_SERVER_SUPPORT</span></code> 模块，则需要安装gse</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>2.4. 创建数据库实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>创建实例用户组/用户</p></li>
+<li><p>创建实例</p></li>
+<li><p>创建表空间目录</p></li>
+<li><p>创建数据库</p></li>
+<li><p>创建缓冲池</p></li>
+<li><p>创建表空间</p></li>
+<li><p>创建临时表空间</p></li>
+<li><p>配置自启动</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ groupadd -g <span class="m">1000</span> db2adm
+$ useradd -g db2adm bgis
+$ passed bgis
+
+$ /opt/ibm/db2/V9.7/instance/db2icrt -u bgis bgis
+
+<span class="c1"># 创建表空间目录</span>
+$ mkdir -p /home/bgis/bgis_data/tbspaces/data_sms
+$ chown -R bgis:db2adm /home/bgis/bgis_data
+
+$ su - bgis
+$ db2start
+$ db2 create database geodb using codeset gbk territory cn
+$ db2 connect to geodb
+
+<span class="c1"># 创建该数据库的页面大小为32K的缓冲池</span>
+$ db2 create BUFFERPOOL BP32 size <span class="m">100000</span> pagesize 32k
+<span class="c1"># 创建页面大小为32K的表空间</span>
+$ db2 <span class="s2">&quot;create REGULAR TABLESPACE data_sms pagesize 32k managed by system using(&#39;/home/bgis/bgis_data/tbspaces/data_sms&#39;) bufferpool bp32&quot;</span>
+<span class="c1"># 创建页面大小为32k的临时表空间</span>
+$ db2 CREATE SYSTEM TEMPORARY TABLESPACE TEMPSPACE_bgis PAGESIZE 32K MANAGED BY AUTOMATIC STORAGE EXTENTSIZE <span class="m">32</span> PREFETCHSIZE AUTOMATIC BUFFERPOOL bp32
+
+$ ./instance/db2iauto -on bgis
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>2.5. 外部连接配置<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>设置连接端口</p></li>
+<li><p>设置连接协议</p></li>
+<li><p>重启db2数据库</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ su - bgis
+$ db2 get dbm cfg <span class="p">|</span> grep SVCENAME
+$ db2 update dbm cfg using SVCENAME <span class="m">60000</span>
+
+$ db2set -all
+$ db2set <span class="nv">DB2COMM</span><span class="o">=</span>TCPIP
+
+$ db2 force application all
+$ db2stop
+$ db2start
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>2.6. 日志和堆参数设置<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>查看数据库参数</p></li>
+<li><p>修改日志参数</p></li>
+<li><p>修改空间数据库堆参数</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ su - bgis
+$ db2 connect to geodb
+$ db2 get db cfg
+
+$ db2 get db cfg <span class="p">|</span> grep LOG
+$ db2 update db cfg using LOGFILSIZ <span class="m">100000</span>
+$ db2 update db cfg using LOGPRIMARY <span class="m">20</span>
+$ db2 update db cfg using LOGSECOND <span class="m">20</span>
+
+$ db2 update db cfg <span class="k">for</span> geodb using APPLHEAPSZ <span class="m">2048</span>
+
+$ db2 force application all
+$ db2stop
+$ db2start
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>启用空间数据库要求 <code class="docutils literal notranslate"><span class="pre">APPLHEAPSZ</span></code> 最少2048</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>2.7. 开启空间数据库<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>开启空间化</p></li>
+<li><p>创建sde用户</p></li>
+<li><p>赋予sde权限</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ db2se enable_db geodb
+
+$ groupadd -g <span class="m">911</span> sdegroup
+$ useradd -g sdegroup -u <span class="m">811</span> -d /home/sde -m -s /bin/bash sde
+<span class="c1"># passwd sde</span>
+
+$ su - bgis
+$ db2 connect to geodb
+$ db2 grant dbadm on database to user sde
+$ db2 update dbm cfg using sysmon_group sdegroup
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ArcGIS要求数据库持有用户名必须是 <code class="docutils literal notranslate"><span class="pre">sde</span></code></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../oracle.html" class="btn btn-neutral float-right" title="Oracle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="DB2空间数据库Client安装.html" class="btn btn-neutral float-left" title="1. DB2空间数据库Client安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, Stefan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

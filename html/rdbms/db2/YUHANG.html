@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. 余杭农商行GIS功能 &mdash; Stefan 1.0.0-RELEASE documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Oracle" href="../oracle.html" />
+    <link rel="prev" title="2. DB2空间数据库Server安装" href="DB2空间数据库Server安装.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Stefan
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../rdbms.html">RDBMS</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../db2.html">DB2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="DB2空间数据库Client安装.html">1. DB2空间数据库Client安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DB2空间数据库Server安装.html">2. DB2空间数据库Server安装</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. 余杭农商行GIS功能</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.1. 服务器环境</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.2. 154.11.160.138</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.3. 154.11.160.140</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3.4. 成果展示</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../oracle.html">Oracle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nosql.html">NoSQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bigdata.html">BigData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tool.html">Tool</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Stefan</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../rdbms.html">RDBMS</a> &raquo;</li>
+        
+          <li><a href="../db2.html">DB2</a> &raquo;</li>
+        
+      <li>3. 余杭农商行GIS功能</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/rdbms/db2/YUHANG.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gis">
+<h1>3. 余杭农商行GIS功能<a class="headerlink" href="#gis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>3.1. 服务器环境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">服务器列表</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>IP</p></th>
+<th class="head"><p>系统</p></th>
+<th class="head"><p>用户</p></th>
+<th class="head"><p>用户组</p></th>
+<th class="head"><p>密码</p></th>
+<th class="head"><p>安装应用</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>154.11.160.138</p></td>
+<td><p>RedHat6.6</p></td>
+<td><p>arcgis</p></td>
+<td><p>esri</p></td>
+<td><p>arcgis</p></td>
+<td><p>地图Server/Tomcat8/DB2-9.7-client</p></td>
+</tr>
+<tr class="row-odd"><td><p>154.11.160.139</p></td>
+<td><p>windows</p></td>
+<td><p>Administrator</p></td>
+<td></td>
+<td><p>YHkjb123456</p></td>
+<td><p>地图Desktop/DB2-11.5-client</p></td>
+</tr>
+<tr class="row-even"><td><p>154.11.160.140</p></td>
+<td><p>RedHat6.6</p></td>
+<td><p>sjck</p></td>
+<td><p>db2adm</p></td>
+<td><p>sjck</p></td>
+<td><p>DB2-9.7-server</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h2>3.2. 154.11.160.138<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="server">
+<h3>3.2.1. 地图Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+<p>地图服务器开机自启动，如需手动重启，执行以下命令。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ /home/arcgis/server/stopserver.sh
+$ /home/arcgis/server/startserver.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>浏览器打开 <code class="docutils literal notranslate"><span class="pre">http://154.11.160.138:6080/arcgis/manager</span></code> ，用户名密码为 <code class="docutils literal notranslate"><span class="pre">siteadmin</span></code> ，确认首页 <code class="docutils literal notranslate"><span class="pre">管理服务</span></code> 的地图服务列表都处于 <code class="docutils literal notranslate"><span class="pre">已启用</span></code> 状态。或通过 <code class="docutils literal notranslate"><span class="pre">http://154.11.160.138:6080/arcgis/rest/services</span></code> 查看具体服务。</p>
+</div>
+</div>
+<div class="section" id="tomcat8">
+<h3>3.2.2. Tomcat8<a class="headerlink" href="#tomcat8" title="Permalink to this headline">¶</a></h3>
+<p>Tomcat服务器开机自启动，如需手动重启，执行以下命令。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> <span class="nv">$TOMCAT_HOME</span>
+$ ./bin/shutdown.sh
+$ ./bin/start.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tomcat中部署地图项目为 <code class="docutils literal notranslate"><span class="pre">ags_js_314</span></code> 和  <code class="docutils literal notranslate"><span class="pre">bgis-yuhang</span></code> 。</p>
+</div>
+</div>
+<div class="section" id="db2-9-7-client">
+<h3>3.2.3. DB2-9.7-client<a class="headerlink" href="#db2-9-7-client" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>地图空间化数据库依赖DB2客户端，客户端创建了实例 <code class="docutils literal notranslate"><span class="pre">DB2INSTANCE=arcgis</span></code> 。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>3.3. 154.11.160.140<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="db2-9-7-server">
+<h3>3.3.1. DB2-9.7-server<a class="headerlink" href="#db2-9-7-server" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">DB2数据库配置</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>配置</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>版本</p></td>
+<td><p>9.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>用户组</p></td>
+<td><p>db2adm</p></td>
+</tr>
+<tr class="row-even"><td><p>服务器用户</p></td>
+<td><p>sjck</p></td>
+</tr>
+<tr class="row-odd"><td><p>服务器密码</p></td>
+<td><p>sjck</p></td>
+</tr>
+<tr class="row-even"><td><p>数据库实例</p></td>
+<td><p>sjck</p></td>
+</tr>
+<tr class="row-odd"><td><p>数据库名</p></td>
+<td><p>geodb</p></td>
+</tr>
+<tr class="row-even"><td><p>数据库用户</p></td>
+<td><p>sde</p></td>
+</tr>
+<tr class="row-odd"><td><p>数据库密码</p></td>
+<td><p>sde</p></td>
+</tr>
+<tr class="row-even"><td><p>TCPIP端口</p></td>
+<td><p>60000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>3.4. 成果展示<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p><strong>演示地址</strong> <code class="docutils literal notranslate"><span class="pre">http://154.11.160.138:8888/bgis-yuhang</span></code></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../oracle.html" class="btn btn-neutral float-right" title="Oracle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="DB2空间数据库Server安装.html" class="btn btn-neutral float-left" title="2. DB2空间数据库Server安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2020, Stefan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
